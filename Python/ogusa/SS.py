@@ -369,6 +369,9 @@ def inner_loop(outer_loop_vars, params, baseline):
     new_T_H = tax.get_lump_sum(new_r, new_w, b_s, nssmat, new_BQ, factor, T_H_params)
 
     print 'Inner Loop Max Euler Error: ', (np.absolute(euler_errors)).max()
+    print('Aggreate savings = ', K)
+    print('Interest rate = ', r)
+    quit()
     # print 'K: ', K
     # print 'L: ', L
     #print 'bssmat: ', bssmat
@@ -833,7 +836,7 @@ def run_SS(income_tax_params, ss_params, iterative_params, chi_params, baseline=
 
     if baseline:
         # wguess = START_VALUES['wss'] #0.968167841907 #1.16
-        rguess = START_VALUES['rss'] #0.116998690192 #.068
+        rguess = START_VALUES['rss'] * 1.001 #0.116998690192 #.068
         T_Hguess = START_VALUES['T_Hss'] #0.0304546765599 #0.046
         factorguess = START_VALUES['factor_ss'] #274072.825051 #239344.894517
         # wguess = 0.968167841907 #1.16

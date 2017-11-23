@@ -63,14 +63,14 @@ def run_micro_macro(user_params):
             Run SS for Baseline first
         ------------------------------------------------------------------------
         '''
-        # output_base = baseline_dir
-        # input_dir = baseline_dir
-        # kwargs={'output_base':output_base, 'baseline_dir':baseline_dir,
-        #         'baseline':True, 'reform':0, 'user_params':user_params,
-        #         'guid':'baseline_sigma_'+str(item),'calibrate_model':False}
-        # # runner_SS(**kwargs)
-        # runner(**kwargs)
-        #
+        output_base = baseline_dir
+        input_dir = baseline_dir
+        kwargs={'output_base':output_base, 'baseline_dir':baseline_dir,
+                'baseline':True, 'reform':0, 'user_params':user_params,
+                'guid':'baseline_sigma_'+str(item),'calibrate_model':False}
+        # runner_SS(**kwargs)
+        runner(**kwargs)
+        quit()
 
 
         # '''
